@@ -1,0 +1,65 @@
+{
+    "GolfAgent": {
+        "checkpoints": [
+            {
+                "steps": 12587,
+                "file_path": "results\\GolfAgent\\GolfAgent\\GolfAgent-12587.onnx",
+                "reward": -1.0,
+                "creation_time": 1651567059.0207944,
+                "auxillary_file_paths": [
+                    "results\\GolfAgent\\GolfAgent\\GolfAgent-12587.pt"
+                ]
+            },
+            {
+                "steps": 21584,
+                "file_path": "results\\GolfAgent\\GolfAgent\\GolfAgent-21584.onnx",
+                "reward": null,
+                "creation_time": 1651567289.588384,
+                "auxillary_file_paths": [
+                    "results\\GolfAgent\\GolfAgent\\GolfAgent-21584.pt"
+                ]
+            },
+            {
+                "steps": 26393,
+                "file_path": "results\\GolfAgent\\GolfAgent\\GolfAgent-26393.onnx",
+                "reward": 1.0,
+                "creation_time": 1651567454.814932,
+                "auxillary_file_paths": [
+                    "results\\GolfAgent\\GolfAgent\\GolfAgent-26393.pt"
+                ]
+            },
+            {
+                "steps": 33841,
+                "file_path": "results\\GolfAgent\\GolfAgent\\GolfAgent-33841.onnx",
+                "reward": null,
+                "creation_time": 1651568173.9614506,
+                "auxillary_file_paths": [
+                    "results\\GolfAgent\\GolfAgent\\GolfAgent-33841.pt"
+                ]
+            },
+            {
+                "steps": 37569,
+                "file_path": "results\\GolfAgent\\GolfAgent\\GolfAgent-37569.onnx",
+                "reward": 1.0,
+                "creation_time": 1651568301.9000502,
+                "auxillary_file_paths": [
+                    "results\\GolfAgent\\GolfAgent\\GolfAgent-37569.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 37569,
+            "file_path": "results\\GolfAgent\\GolfAgent.onnx",
+            "reward": 1.0,
+            "creation_time": 1651568301.9000502,
+            "auxillary_file_paths": [
+                "results\\GolfAgent\\GolfAgent\\GolfAgent-37569.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

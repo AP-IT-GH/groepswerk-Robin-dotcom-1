@@ -10,6 +10,8 @@ public class GolfAgent : Agent
 {
     private Vector3 startingPos;
     private float speed;
+
+    public Transform holePos;
     public override void Initialize()
     {
         startingPos = transform.localPosition;
@@ -23,9 +25,9 @@ public class GolfAgent : Agent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        Vector3 move = Vector3.zero;
-        move.x = actions.ContinuousActions[0];
-        transform.Translate(move * speed * Time.deltaTime);
+        float move;
+        move = actions.ContinuousActions[0];
+        transform.Translate(move * Vector3.right * speed * Time.deltaTime);
 
        if (transform.localPosition.y < 0f)
        {
@@ -36,6 +38,7 @@ public class GolfAgent : Agent
 
     public override void CollectObservations(VectorSensor sensor)
     {
+        sensor.AddObservation(holePos.localPosition);
     }
 
     private void OnTriggerEnter(Collider other)
