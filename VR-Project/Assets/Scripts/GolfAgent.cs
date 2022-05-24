@@ -10,8 +10,8 @@ public class GolfAgent : Agent
 {
     private Vector3 startingPos;
     private float speed;
-    //private float rotationSpeed;
-    private Rigidbody rb;
+    private float rotationSpeed;
+    public Rigidbody rb;
     private bool didHit;
     private int swings;
 
@@ -19,8 +19,8 @@ public class GolfAgent : Agent
     public override void Initialize()
     {
         startingPos = transform.localPosition;
-        speed = 60f;
-        //rotationSpeed = 10f;
+        speed = 40f;
+        rotationSpeed = 20;
         rb = GetComponent<Rigidbody>();
         swings = 0;
         didHit = false;
@@ -36,15 +36,17 @@ public class GolfAgent : Agent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        float move;
-        //float rotate;
-        move = actions.ContinuousActions[0];
-        //rotate = actions.ContinuousActions[1];
-        //transform.Translate(move * Vector3.right * speed * Time.deltaTime);
-        rb.AddForce(transform.right * speed * move,ForceMode.Impulse);
-        //transform.RotateAround(transform.position,transform.up,Time.deltaTime * rotationSpeed * rotate);
+        float forward;
+        float backward;
+        float rotate;
+        forward = actions.ContinuousActions[0];
+        backward = actions.ContinuousActions[2];
+        rotate = actions.ContinuousActions[1];
+        rb.AddForce(transform.forward * speed * forward,ForceMode.Impulse);
+        rb.AddForce(-transform.forward * speed * backward,ForceMode.Impulse);
+        transform.Rotate(new Vector3(0,rotationSpeed,0) * rotate * Time.deltaTime);
 
-       if (transform.localPosition.y < 0f)
+        if (transform.localPosition.y < 0f)
        {
            SetReward(-1f);
            EndEpisode();
@@ -59,18 +61,19 @@ public class GolfAgent : Agent
 
     private void Update()
     {
-        if (didHit && !speed.Equals(0f))
+        if (!rb.velocity.Equals(Vector3.zero))
+        {
+            didHit = true;
+        }
+
+        if (didHit && rb.velocity.Equals(new Vector3(0, 0, speed)))
         {
             swings += 1;
             speed = 0f;
-            Debug.Log(swings);
         }
 
-        if (rb.velocity == Vector3.zero)
-        {
-            didHit = false;
-            speed = 60f;
-        }
+        speed = 20f;
+        didHit = false;
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -82,11 +85,7 @@ public class GolfAgent : Agent
     {
         var continiousActionsOut = actionsOut.ContinuousActions;
         continiousActionsOut[0] = Input.GetKey(KeyCode.Space) ? 1.0f : 0f;
-
-        if (continiousActionsOut[0] == 1.0f)
-        {
-            didHit = true;
-        }
+        continiousActionsOut[1] = Input.GetKey(KeyCode.LeftShift) ? 1.0f : 0f;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -95,6 +94,21 @@ public class GolfAgent : Agent
         {
             rb.velocity = Vector3.zero;
             SetReward(1f);
+            EndEpisode();
+        }
+
+        if (other.CompareTag("obstacle"))
+        {
+            SetReward(-1f);
+            EndEpisode();
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("obstacle"))
+        {
+            SetReward(-1f);
             EndEpisode();
         }
     }
