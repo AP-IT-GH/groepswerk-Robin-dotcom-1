@@ -1,0 +1,38 @@
+{
+    "GolfAgent": {
+        "checkpoints": [
+            {
+                "steps": 241279,
+                "file_path": "results/GolfAgent/GolfAgent/GolfAgent-241279.onnx",
+                "reward": null,
+                "creation_time": 1653398915.9919536,
+                "auxillary_file_paths": [
+                    "results/GolfAgent/GolfAgent/GolfAgent-241279.pt"
+                ]
+            },
+            {
+                "steps": 257378,
+                "file_path": "results/GolfAgent/GolfAgent/GolfAgent-257378.onnx",
+                "reward": null,
+                "creation_time": 1653399120.3558536,
+                "auxillary_file_paths": [
+                    "results/GolfAgent/GolfAgent/GolfAgent-257378.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 257378,
+            "file_path": "results/GolfAgent/GolfAgent.onnx",
+            "reward": null,
+            "creation_time": 1653399120.3558536,
+            "auxillary_file_paths": [
+                "results/GolfAgent/GolfAgent/GolfAgent-257378.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.8.1+cu102"
+    }
+}
