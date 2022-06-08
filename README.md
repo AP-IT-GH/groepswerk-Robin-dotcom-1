@@ -16,14 +16,15 @@ De eerste omgeving waar we in gaan trainen gaat een simpele golfbaan zijn. Hier 
 Het zal zelf moeten bepalen moet hoeveel kracht hij zal schieten om een hole-in-one te halen.
 
 De 2e omgeving zal een golfbaan zijn waar bochten en heuvels in voorkomen. Hier zal de AI nog altijd de hole weten zijn maar zal hij niet meer in een rechte lijn kunnen schieten en zich moeten draaien.
-De 3e omgeving zal zoals de 2e omgeving zijn maar deze zal dan ook obstakels bevatten om de AI te leren obstakels te ontwijken.
+
+De 3e omgeving zal zoals de 2e omgeving zijn maar deze zal dan ook obstakels bevatten om de AI te leren obstakels te ontwijken. Deze omgeving is de grootste challenge. 
 
 Acties:
 
-De AI moet zal met verschillende zaken rekening houden. Hij kan de kracht bepalen waarmee hij op het balletje slaat. Ook kan hij de richting van het balletje veranderen om zo dichter bij de hole te komen. Als laatste kan hij ook het startpunt van het balletje bepalen bij het begin van de game. Hiervoor heeft hij keuze op een horizontale lijn in het startgebied. 
+De AI zal met verschillende zaken rekening moeten houden. Hij kan de kracht bepalen waarmee hij op het balletje slaat. Ook kan hij de richting van het balletje veranderen om zo dichter bij de hole te komen. Als laatste kan hij ook het startpunt van het balletje bepalen bij het begin van de game. Hiervoor heeft hij keuze op een horizontale lijn in het startgebied. 
 
 Observations:
 
-Locatie van de hole wordt bijgehouden en door ook gebruik te maken van de locatie van de bal kan het hiermee de afstand en de richting berekenen.
+Locatie van de hole wordt bijgehouden en door ook gebruik te maken van de locatie van de bal kan de agent hiermee de afstand en de richting berekenen.
 We gaan de AI ook ogen geven om eventuele obstakels te detecteren en hierop te reageren. 
-Deze ogen zullen ook helpen met hoeken te zien op de golfbanen.
+Deze ogen helpen ook met hoeken te zien op de golfbanen.
