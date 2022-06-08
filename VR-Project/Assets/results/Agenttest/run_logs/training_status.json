@@ -2,31 +2,22 @@
     "GolfAgent": {
         "checkpoints": [
             {
-                "steps": 499991,
-                "file_path": "results\\Agenttest\\GolfAgent\\GolfAgent-499991.onnx",
-                "reward": -0.4992633517495396,
-                "creation_time": 1654718936.8439705,
+                "steps": 194113,
+                "file_path": "results\\Agenttest\\GolfAgent\\GolfAgent-194113.onnx",
+                "reward": 0.8856877323420075,
+                "creation_time": 1654723814.8481867,
                 "auxillary_file_paths": [
-                    "results\\Agenttest\\GolfAgent\\GolfAgent-499991.pt"
-                ]
-            },
-            {
-                "steps": 500003,
-                "file_path": "results\\Agenttest\\GolfAgent\\GolfAgent-500003.onnx",
-                "reward": -0.4992638940007361,
-                "creation_time": 1654718936.9279897,
-                "auxillary_file_paths": [
-                    "results\\Agenttest\\GolfAgent\\GolfAgent-500003.pt"
+                    "results\\Agenttest\\GolfAgent\\GolfAgent-194113.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 500003,
+            "steps": 194113,
             "file_path": "results\\Agenttest\\GolfAgent.onnx",
-            "reward": -0.4992638940007361,
-            "creation_time": 1654718936.9279897,
+            "reward": 0.8856877323420075,
+            "creation_time": 1654723814.8481867,
             "auxillary_file_paths": [
-                "results\\Agenttest\\GolfAgent\\GolfAgent-500003.pt"
+                "results\\Agenttest\\GolfAgent\\GolfAgent-194113.pt"
             ]
         }
     },

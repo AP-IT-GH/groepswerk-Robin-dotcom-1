@@ -46,6 +46,13 @@ public class GolfAgent : Agent
         rb.AddForce(-transform.forward * speed * backward,ForceMode.Impulse);
         transform.Rotate(new Vector3(0,rotationSpeed,0) * rotate * Time.deltaTime);
 
+        float distanceToTarget = Vector3.Distance(this.transform.localPosition, holePos.localPosition);
+        if (distanceToTarget < 1.42f )
+        {
+            SetReward(1.0f);
+            EndEpisode();
+        }
+
         if (transform.localPosition.y < 0f)
        {
            SetReward(-1f);
@@ -74,7 +81,7 @@ public class GolfAgent : Agent
 
     public override void CollectObservations(VectorSensor sensor)
     {
-        sensor.AddObservation(holePos.localPosition);
+        sensor.AddObservation(this.transform.localPosition);
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
