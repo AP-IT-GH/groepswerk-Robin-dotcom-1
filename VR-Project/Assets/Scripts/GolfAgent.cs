@@ -52,11 +52,7 @@ public class GolfAgent : Agent
            EndEpisode();
        }
 
-       if (swings >= 7)
-       {
-           SetReward(-1f);
-           EndEpisode();
-       }
+      
     }
 
     private void Update()
@@ -96,12 +92,12 @@ public class GolfAgent : Agent
             SetReward(1f);
             EndEpisode();
         }
-
-        if (other.CompareTag("obstacle"))
+        else if (other.CompareTag("obstacle"))
         {
             SetReward(-1f);
             EndEpisode();
         }
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -109,6 +105,11 @@ public class GolfAgent : Agent
         if (collision.collider.CompareTag("obstacle"))
         {
             SetReward(-1f);
+            EndEpisode();
+        }
+       else if (collision.collider.CompareTag("wall"))
+        {
+            SetReward(-0.5f);
             EndEpisode();
         }
     }
