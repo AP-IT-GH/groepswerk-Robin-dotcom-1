@@ -46,17 +46,20 @@ public class GolfAgent : Agent
         rb.AddForce(-transform.forward * speed * backward,ForceMode.Impulse);
         transform.Rotate(new Vector3(0,rotationSpeed,0) * rotate * Time.deltaTime);
 
+        float distanceToTarget = Vector3.Distance(this.transform.localPosition, holePos.localPosition);
+        if (distanceToTarget < 1.42f )
+        {
+            SetReward(1.0f);
+            EndEpisode();
+        }
+
         if (transform.localPosition.y < 0f)
        {
            SetReward(-1f);
            EndEpisode();
        }
 
-       if (swings >= 7)
-       {
-           SetReward(-1f);
-           EndEpisode();
-       }
+      
     }
 
     private void Update()
@@ -78,6 +81,7 @@ public class GolfAgent : Agent
 
     public override void CollectObservations(VectorSensor sensor)
     {
+        sensor.AddObservation(this.transform.localPosition);
         sensor.AddObservation(holePos.localPosition);
     }
 
@@ -96,12 +100,12 @@ public class GolfAgent : Agent
             SetReward(1f);
             EndEpisode();
         }
-
-        if (other.CompareTag("obstacle"))
+        else if (other.CompareTag("obstacle"))
         {
             SetReward(-1f);
             EndEpisode();
         }
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -109,6 +113,11 @@ public class GolfAgent : Agent
         if (collision.collider.CompareTag("obstacle"))
         {
             SetReward(-1f);
+            EndEpisode();
+        }
+       else if (collision.collider.CompareTag("wall"))
+        {
+            SetReward(-0.5f);
             EndEpisode();
         }
     }
