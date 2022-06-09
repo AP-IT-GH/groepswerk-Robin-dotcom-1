@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - hole
+  - wall
+  - obstacle
+  - playerScore
+  - stick
   layers:
   - Default
   - TransparentFX
@@ -12,8 +16,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Left Hand Physics
+  - Right Hand Physics
   - 
   - 
   - 
