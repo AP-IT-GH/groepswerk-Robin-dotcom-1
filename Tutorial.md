@@ -42,7 +42,14 @@ De agent is een 3d sphere object met rigidbody, behavior parameters, golf agent 
 ![image](https://user-images.githubusercontent.com/72873870/172711098-6d183b31-66e2-44e5-a7c8-bf3fc6c93eb2.png)
 
 Het golf agent script ziet er als volgt uit: 
---insert golf agent script image--
+![properties](https://user-images.githubusercontent.com/60871981/172820980-c69b03b1-2835-4fcc-ae47-85c071e840f6.PNG)
+![initialize](https://user-images.githubusercontent.com/60871981/172821087-e80e8c44-491e-4d64-96c4-ccb1a1cf66b8.PNG)
+![collision](https://user-images.githubusercontent.com/60871981/172821134-1d51193a-ea3e-4257-8cd2-9eb0aa270c09.PNG)
+![detection](https://user-images.githubusercontent.com/60871981/172821249-dd7bf60a-7dda-4cdc-861b-b2a11457749d.PNG)
+
+
+
+
 
 ## 3. Maken van maps
 
