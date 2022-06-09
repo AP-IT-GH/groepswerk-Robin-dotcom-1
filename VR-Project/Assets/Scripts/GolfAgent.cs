@@ -82,6 +82,7 @@ public class GolfAgent : Agent
     public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(this.transform.localPosition);
+        sensor.AddObservation(holePos.localPosition);
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
