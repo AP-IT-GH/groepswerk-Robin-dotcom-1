@@ -7,6 +7,8 @@ TagManager:
   - hole
   - wall
   - obstacle
+  - playerScore
+  - stick
   layers:
   - Default
   - TransparentFX
