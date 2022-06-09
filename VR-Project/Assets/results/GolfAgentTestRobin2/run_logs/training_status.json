@@ -1,0 +1,65 @@
+{
+    "GolfAgent": {
+        "checkpoints": [
+            {
+                "steps": 29627,
+                "file_path": "results\\GolfAgentTestRobin2\\GolfAgent\\GolfAgent-29627.onnx",
+                "reward": null,
+                "creation_time": 1654740057.47093,
+                "auxillary_file_paths": [
+                    "results\\GolfAgentTestRobin2\\GolfAgent\\GolfAgent-29627.pt"
+                ]
+            },
+            {
+                "steps": 35773,
+                "file_path": "results\\GolfAgentTestRobin2\\GolfAgent\\GolfAgent-35773.onnx",
+                "reward": null,
+                "creation_time": 1654740112.5107644,
+                "auxillary_file_paths": [
+                    "results\\GolfAgentTestRobin2\\GolfAgent\\GolfAgent-35773.pt"
+                ]
+            },
+            {
+                "steps": 41917,
+                "file_path": "results\\GolfAgentTestRobin2\\GolfAgent\\GolfAgent-41917.onnx",
+                "reward": null,
+                "creation_time": 1654740197.4108927,
+                "auxillary_file_paths": [
+                    "results\\GolfAgentTestRobin2\\GolfAgent\\GolfAgent-41917.pt"
+                ]
+            },
+            {
+                "steps": 49004,
+                "file_path": "results\\GolfAgentTestRobin2\\GolfAgent\\GolfAgent-49004.onnx",
+                "reward": -0.8509803921276448,
+                "creation_time": 1654740289.972433,
+                "auxillary_file_paths": [
+                    "results\\GolfAgentTestRobin2\\GolfAgent\\GolfAgent-49004.pt"
+                ]
+            },
+            {
+                "steps": 88589,
+                "file_path": "results\\GolfAgentTestRobin2\\GolfAgent\\GolfAgent-88589.onnx",
+                "reward": -0.47058823529411764,
+                "creation_time": 1654740508.5100603,
+                "auxillary_file_paths": [
+                    "results\\GolfAgentTestRobin2\\GolfAgent\\GolfAgent-88589.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 88589,
+            "file_path": "results\\GolfAgentTestRobin2\\GolfAgent.onnx",
+            "reward": -0.47058823529411764,
+            "creation_time": 1654740508.5100603,
+            "auxillary_file_paths": [
+                "results\\GolfAgentTestRobin2\\GolfAgent\\GolfAgent-88589.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
