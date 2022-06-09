@@ -144,6 +144,15 @@ Elke sceneSwitch object heeft een script genaamd SceneSwitch:
 
 Na het toevoegen van de namespace UnityEngine.SceneManagement kunnen we gebruik maken van de LoadScene methode om de volgende scene te laden bij een collide event. Wanneer de bal in de hole valt, zal de volgende scene worden geladen. 
 
+#### Menu
+We hebben een VR menu toegevoegd aan elke scene om zo van map te wisselen. Het is een simpele UI canvas component met twee belangrijke scripts. Onderstaand script zorgt ervoor dat je de menu tevoorschijn kan laten komen door op de y-knop van je controller te drukken: 
+
+![image](https://user-images.githubusercontent.com/72873870/172815928-546830c6-ceea-4210-8acf-70bfbce7d495.png)
+
+De buttons op het canvas zijn gelinkt met de scenes met behulp van de OnClick() method van Unity. Je geeft de naam van de te laden scene mee als parameter. Hiervoor is ook een kort scriptje geschreven:
+
+![image](https://user-images.githubusercontent.com/72873870/172816228-00a4215a-c4f0-47e5-85af-40b1c15c0de9.png)
+
 ## 5. VR
 
 Voor het VR aspect van het project hebben we het vrij simpel gehouden.
@@ -158,3 +167,4 @@ Vervolgens moeten we de speler een manier geven om te teleporteren, hiervoor gav
 
 Voor de physics hebben we gebruik gemaakt van de built-in physics van unity zelf waarvoor niets van extra programmeren nodig was. 
 Je voegt een aan de bal en de stick beide een rigidbody toe en unity doet de rest.
+
